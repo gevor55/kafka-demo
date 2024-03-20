@@ -1,4 +1,4 @@
-###Demo Kafka Application
+### Demo Kafka Application
 
 **This is a demo Kafka application that demonstrates the integration of Kafka messaging system with a Spring Boot application.**
 
