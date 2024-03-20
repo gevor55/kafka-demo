@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create
+  kafka:
+    bootstrapAddress: localhost:9092
+    groupId: your-group-id
+    concurrency: 3
+    consumer:
+      properties:
+        max.poll.interval.ms: 60000
+        max.poll.records: 10
+        partition.assignment.strategy: org.apache.kafka.clients.consumer.RoundRobinAssignor
+        heartbeat.interval.ms: 3000
+    topic:
+      book:
+        name: book_topic
+        partitions: 3
+        replicas: 1
